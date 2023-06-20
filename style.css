@@ -1,18 +1,25 @@
+body {
+    margin: .25rem;
+    font-family: 'Nunito';
+}
+
 header {
     text-align: center;
 }
 
 .logo-container {
-    padding: 20px 0;
+    padding: 2.5rem 0;
 }
 
 .logo-container img {
-    height: 60px;
+    height: 2rem;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin-block-end: 1.25rem;
+    margin-block-start: 0;
 }
 
 nav ul li {
@@ -23,4 +30,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: black;
+    font-size: 1rem;
+    line-height: 1.125rem;
+    text-transform: uppercase;
 }

@@ -7,7 +7,7 @@
 
 .grid-item {
     flex: 1 0 22%; /* 4 items per row */
-    margin: 1%; /* minimal padding */
+    margin: .25rem;
     position: relative;
 }
 
