@@ -1,0 +1,26 @@
+header {
+    text-align: center;
+}
+
+.logo-container {
+    padding: 20px 0;
+}
+
+.logo-container img {
+    height: 60px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
