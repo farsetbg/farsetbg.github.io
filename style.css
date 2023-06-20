@@ -7,12 +7,24 @@ header {
     text-align: center;
 }
 
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .logo-container {
     padding: 2.5rem 0;
 }
 
 .logo-container img {
     height: 2rem;
+}
+
+.mobile-nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 nav ul {
@@ -33,4 +45,81 @@ nav ul li a {
     font-size: 1rem;
     line-height: 1.125rem;
     text-transform: uppercase;
+    font-weight: 200;
+}
+
+nav ul {
+    display: flex;  /* Visible by default */
+}
+
+@media screen and (max-width: 576px) {
+    nav ul {
+        display: none;  /* Hidden on smaller screens */
+    }
+}
+
+#menu_icon {
+    position: absolute;
+    top: 2.175rem; /* adjust this value to place it where you prefer */
+    left: 1rem; /* adjust this value to place it where you prefer */
+    z-index: 2; /* this will ensure the icon stays above other elements */
+    display: none;
+    width: 3rem;
+    max-height: 3rem;
+    border-radius: 10%;
+    transition: background-color .3s;
+}
+
+.menu_icon_dash {
+    fill: #000;
+    transform-origin: 50% 50%;
+    opacity: 1;
+    transition: transform .3s, opacity .3s;
+}
+
+#menu_icon:hover {
+    cursor: pointer;
+}
+
+.menuexpanded #dash_top {
+    transform: translateY(16.75%) translateX(-16.9%) rotate(45deg);
+}
+
+.menuexpanded #dash_bottom {
+    transform: translateY(16.75%) translateX(16.9%) rotate(135deg);
+}
+
+.menuexpanded #dash_middle {
+    transform: rotate(135deg);
+    opacity: 0;
+}
+
+@media screen and (max-width: 576px) {
+    #menu_icon {
+        display: inline-block;  /* Visible on smaller screens */
+    }
+
+    #nav-menu {
+        display: none;
+    }
+}
+
+
+
+#mobile-nav ul {
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    position: fixed; /* Changed from absolute to fixed */
+    top: 4rem; /* adjust this value so that it doesn't cover the logo */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 2em;
+    overflow: auto; /* will allow scrolling if the list is longer than the screen */
+    z-index: 1; /* this will keep the nav under the menu icon */
+}
+
+#mobile-nav ul li {
+    padding: 1em 0;
 }

@@ -4,25 +4,46 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="homepage.css">
-        <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
     </head>
 
     <body>
         
         <header>
-            <div class="logo-container">
-                <img src="assets/logo.svg" alt="Logo" />
+            <div class="header-container">
+                <div class="logo-container">
+                    <img src="assets/logo.svg" alt="Logo" />
+                </div>
+                <nav>
+                    <ul id="nav-menu">
+                        <li><a href="#">За нас</a></li>
+                        <li><a href="#">Проекти</a></li>
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#">Контакти</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-nav-container">
+                    <svg id="menu_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" onclick="toggleMenu()">
+                        <g id="dashes">
+                            <path id="dash_bottom" class="menu_icon_dash" d="M145 609l609 0c74,0 74,111 0,111l-609 0c-74,0 -74,-111 0,-111z"></path>
+                            <path id="dash_middle" class="menu_icon_dash" d="M146 394c203,0 406,0 609,0 74,0 74,111 0,111 -203,0 -406,0 -609,0 -74,0 -74,-111 0,-111z"></path>
+                            <path id="dash_top" class="menu_icon_dash" d="M146 179l609 0c74,0 74,111 0,111l-609 0c-74,0 -74,-111 0,-111z"></path>
+                        </g>
+                    </svg>
+                    <div id="mobile-nav" style="display: none;">
+                        <ul>
+                            <li><a href="#">За нас</a></li>
+                            <li><a href="#">Проекти</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Контакти</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#">За нас</a></li>
-                    <li><a href="#">Проекти</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Контакти</a></li>
-                </ul>
-            </nav>
-        </header>
-
+        </header>                
+        
         <div class="grid">
             <div class="grid-item">
                 <a href="#">
@@ -36,7 +57,7 @@
                 <a href="#">
                     <img src="assets/image2.png" alt="Image 1">
                     <div class="overlay">
-                        <div class="text">Project 1</div>
+                        <div class="text">Project 2</div>
                     </div>
                 </a>
             </div>
@@ -44,7 +65,7 @@
                 <a href="#">
                     <img src="assets/image3.png" alt="Image 1">
                     <div class="overlay">
-                        <div class="text">Project 1</div>
+                        <div class="text">Project 3</div>
                     </div>
                 </a>
             </div>
@@ -52,13 +73,25 @@
                 <a href="#">
                     <img src="assets/image4.png" alt="Image 1">
                     <div class="overlay">
-                        <div class="text">Project 1</div>
+                        <div class="text">Project 4</div>
                     </div>
                 </a>
             </div>
             <!-- Repeat the grid-item div for each image -->
         </div>
         
+        <script>
+            function toggleMenu() {
+                document.getElementById("menu_icon").classList.toggle("menuexpanded");
+                const menu = document.getElementById('mobile-nav');
+                if (menu.style.display === "none") {
+                    menu.style.display = "block";
+                } else {
+                    menu.style.display = "none";
+                }
+            }
+        </script>               
+
     </body>
 
 </html>
