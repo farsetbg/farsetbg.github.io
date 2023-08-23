@@ -123,3 +123,37 @@ nav ul {
 #mobile-nav ul li {
     padding: 1em 0;
 }
+
+
+/* Base CSS for mobile */
+...
+
+/* iPad in portrait & larger phones (iPhone X, etc) */
+@media only screen and (min-width: 428px) {
+    ...
+}
+
+/* Larger devices - small tablets, large phones (iPad Mini, etc.) */
+@media only screen and (min-width: 578px) {
+    ...
+}
+
+/* Landscape tablets, small desktop screens */
+@media only screen and (min-width: 768px) {
+    ...
+}
+
+/* Larger desktop screens */
+@media only screen and (min-width: 1024px) {
+    ...
+}
+
+/* Even larger desktop screens */
+@media only screen and (min-width: 1440px) {
+    ...
+}
+
+/* And so on */
+@media only screen and (min-width: 1920px) {
+    ...
+}
