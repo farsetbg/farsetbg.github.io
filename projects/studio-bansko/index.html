@@ -45,24 +45,40 @@
 </head>
 
 <body>
-    <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
-        role="banner" class="navigation w-nav">
-        <div class="navigation-wrap"><a href="/" class="logo-link w-nav-brand" aria-label="home">
-                <div class="text-block-2">FARSET</div>
-            </a>
-            <div class="menu">
-                <div class="menu-button w-nav-button" style="-webkit-user-select: text;" aria-label="menu" role="button"
-                    tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false"><img
-                        src="https://uploads-ssl.webflow.com/60c8ac5ca382c23c5fc954a5/60c8ac5ca382c25fccc954ca_menu-icon.png"
-                        width="22" alt="" class="menu-icon"></div>
-            </div><a href="mailto:mail@business.com?subject=You've%20got%20mail!"
-                class="button cc-contact-us w-inline-block">
-                <div>запитване</div>
-            </a>
+    
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="assets/logo.svg" alt="Logo" />
+            </div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#">За нас</a></li>
+                    <li><a href="#">Проекти</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Контакти</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-nav-container">
+                <svg id="menu_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" onclick="toggleMenu()">
+                    <g id="dashes">
+                        <path id="dash_bottom" class="menu_icon_dash" d="M145 609l609 0c74,0 74,111 0,111l-609 0c-74,0 -74,-111 0,-111z"></path>
+                        <path id="dash_middle" class="menu_icon_dash" d="M146 394c203,0 406,0 609,0 74,0 74,111 0,111 -203,0 -406,0 -609,0 -74,0 -74,-111 0,-111z"></path>
+                        <path id="dash_top" class="menu_icon_dash" d="M146 179l609 0c74,0 74,111 0,111l-609 0c-74,0 -74,-111 0,-111z"></path>
+                    </g>
+                </svg>
+                <div id="mobile-nav" style="display: none;">
+                    <ul>
+                        <li><a href="#">За нас</a></li>
+                        <li><a href="#">Проекти</a></li>
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#">Контакти</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0" style="height: 4016.55px; display: block;">
-        </div>
-    </div>
+    </header>            
+    
     <div class="intro-content"></div>
     <div class="section">
         <div class="container w-container">
